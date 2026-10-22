@@ -26,7 +26,7 @@ function iguales(a, b) {
 }
 
 function aviso(titulo, texto) {
-  const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Bienvenida sitti</title>
+  const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Bienvenida Sitti</title>
 <style>:root{--navy:#33357e;--amber:#f7a82c;--bg:#f6f6fb;--fg:#1d1f45;--muted:#5b5e86}
 @media (prefers-color-scheme:dark){:root{--bg:#12132b;--fg:#eceefe;--muted:#a6a9d3}}
 body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--fg);font:400 17px/1.6 "Segoe UI",system-ui,sans-serif;padding:24px;box-sizing:border-box}
@@ -45,9 +45,9 @@ export default async function middleware(request) {
   const ahora = Math.floor(Date.now() / 1000);
 
   if (!secret) return aviso('Página en configuración', 'Experiencia y Bienestar está terminando de configurar esta página. Inténtalo más tarde.');
-  if (!exp || !f) return aviso('Necesitas tu enlace de bienvenida', 'Esta página se abre con el enlace personal que te envió Experiencia y Bienestar de sitti.');
+  if (!exp || !f) return aviso('Necesitas tu enlace de bienvenida', 'Esta página se abre con el enlace personal que te envió Experiencia y Bienestar de Sitti.');
   if (exp > ahora + MAX_DIAS * 86400 || !iguales(f, await firma(secret, exp))) return aviso('Enlace no válido', 'Revisa que hayas copiado el enlace completo o pide uno nuevo a Experiencia y Bienestar.');
-  if (exp < ahora) return aviso('Este enlace ya venció', 'Los enlaces de bienvenida duran 7 días. Pide uno nuevo a Experiencia y Bienestar de sitti.');
+  if (exp < ahora) return aviso('Este enlace ya venció', 'Los enlaces de bienvenida duran 7 días. Pide uno nuevo a Experiencia y Bienestar de Sitti.');
 
   return new Response(null, { headers: { 'x-middleware-next': '1' } });
 }
