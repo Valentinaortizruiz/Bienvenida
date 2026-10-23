@@ -163,6 +163,12 @@ ul.list{margin:0;padding-left:18px;display:grid;gap:6px}
 .pending .tag{justify-self:start;font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--tint);color:var(--brand);padding:6px 10px;border-radius:999px}
 
 /* Presentación personal: listas de sí / no */
+.refs{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:14px}
+.refs.two{grid-template-columns:repeat(2,minmax(0,260px))}
+.ref{margin:0;background:#ffffff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-rows:auto auto}
+.ref img{width:100%;height:340px;object-fit:contain;object-position:bottom;display:block;max-width:100%}
+.ref figcaption{padding:10px 12px;font-size:13px;font-weight:700;color:#33357e;text-align:center;background:#ffffff}
+@media (max-width:700px){.refs{grid-template-columns:repeat(2,minmax(0,1fr))}.refs .wide{grid-column:1/-1}.ref img{height:260px}}
 ul.rules{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .panel ul.rules{padding:0}
 ul.rules li{position:relative;padding-left:30px;color:var(--fg);font-size:15px}
@@ -353,6 +359,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
     <div class="block">
       <h2>La dotación</h2>
       <p class="lead">La dotación y los elementos institucionales se portan con orgullo, responsabilidad y sentido de pertenencia, sin alteraciones.</p>
+      <div class="refs">
+        <figure class="ref wide"><img src="ref-dotacion-grupo.jpg" alt="Tres talentos de Sitti con la camisa institucional azul claro por dentro del jean y correa" loading="lazy"><figcaption>Camisa institucional</figcaption></figure>
+        <figure class="ref"><img src="ref-polo.jpg" alt="Talento de Sitti con polo institucional azul oscuro, jean y correa negra" loading="lazy"><figcaption>Polo institucional</figcaption></figure>
+        <figure class="ref"><img src="ref-camisa.jpg" alt="Talento de Sitti con camisa institucional azul claro y correa" loading="lazy"><figcaption>Camisa institucional</figcaption></figure>
+      </div>
+      <p class="source">Fotos de referencia del manual de dotación e imagen personal.</p>
       <p class="callout"><b>Si tu cargo tiene dotación,</b> recibirás una provisional al finalizar la inducción. Cuando cumplas los dos meses del periodo de prueba, se te entrega la dotación oficial.</p>
       <div class="grid2">
         <ul class="rules yes panel">
@@ -393,6 +405,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
     <div class="block">
       <h2>Si no tienes uniforme</h2>
       <p class="lead">Nuestra presentación personal comunica respeto por el ciudadano, por nuestros compañeros y por la empresa que representamos.</p>
+      <div class="refs two">
+        <figure class="ref"><img src="ref-sin-uniforme-1.jpg" alt="Talento de Sitti con blusa de color neutro y pantalón negro" loading="lazy"><figcaption>Blusa de color neutro y pantalón oscuro</figcaption></figure>
+        <figure class="ref"><img src="ref-sin-uniforme-2.jpg" alt="Talento de Sitti con camisa de botones clara" loading="lazy"><figcaption>Camisa de botones</figcaption></figure>
+      </div>
       <div class="grid2">
         <div class="panel"><h3 class="tag-yes">Te recomendamos</h3><ul class="rules yes">
           <li>Camisa o camiseta de color neutro y sin escote pronunciado.</li>
